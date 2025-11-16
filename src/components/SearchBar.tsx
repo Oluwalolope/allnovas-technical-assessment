@@ -25,7 +25,6 @@ const SearchBar = () => {
       >
         <div className="bg-neutral-color w-[493px] rounded-[40px] mt-[26px] py-4 px-5 box-border inline-flex justify-between items-center mx-auto font-medium text-[14px]">
           <input
-            autoFocus
             ref={searchRef}
             type="text"
             name="search"
