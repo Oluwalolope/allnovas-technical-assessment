@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary-color: #F05658;
+
+  /* Neutrals & Background */
+  --background: #FFFFFF;
+  /* --background: #F6F8FC; */
+  --neutral-color: #F3F4F6;
+
+  /* Text Colors */
+  --text-primary: #1B1B1B;
+  --text-secondary: #4D5761;
+
+  --font-inter: "Inter", sans-serif;
+  --font-mali: "Mali", cursive;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+
+@theme inline {
+  --color-primary-color: var(--primary-color);
+  --color-primary-text: var(--text-primary);
+  --color-secondary-text: var(--text-secondary);
+  --color-neutral-color: var(--neutral-color);
+  --font-inter: var(--font-inter);
+  --font-mali: var(--font-mali);
+  --font-manrope: var(--font-manrope);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+#search {
+  background-image: url('/search-icon.png');
+  background-repeat: no-repeat;
+}
+
+.niche {
+  position: relative;
+}
+
+.niche::after {
+  content: url('/niche-pattern.svg');
+  scale: 50%;
+  position: absolute;
+  bottom: 1rem;
+  right: 0.3rem;
+}
+
+@media (width >= 48rem /* 768px */) {
+  .niche::after {
+    scale: 100%;
+    bottom: 2rem;
+    right: 4rem;
+  }
+
+  .banner-arrow {
+    position: relative;
+  }
+
+  .banner-arrow::after {
+    content: url('/banner-arrow.svg');
+    position: absolute;
+    top: 2rem;
+    left: 100%;
+  }
+
+  .community-pattern {
+    position: relative;
+  }
+
+  .community-pattern::after {
+    content: url('/community-pattern.svg');
+    position: absolute;
+    bottom: 70%;
+    right: 2.5rem;
+  }
+
+  .community-background-pattern {
+    position: relative;
+  }
+
+  .community-background-pattern::after {
+    content: url('/community-background-pattern.svg');
+    position: absolute;
+    bottom: 50%;
+    right: -4rem;
+    z-index: -50;
+  }
+
+  .faq-pattern {
+    position: relative;
+  }
+
+  .faq-pattern::after {
+    content: url('/faq-pattern.svg');
+    position: absolute;
+    top: -1rem;
+    right: 3.75rem;
+  }
+
+}
+
+.why-choose-us-list {
+  counter-reset: my-counter;
+}
+
+.why-choose-us-list li {
+  position: relative;
+  counter-increment: my-counter;
+}
+
+.why-choose-us-list li::before {
+  content: counter(my-counter);
+  background: linear-gradient(#460050, #F05658);
+  position: absolute;
+  font-size: 1rem;
+  color: white;
+  line-height: 1;
+  font-weight: 600;
+  display: inline-grid;
+  top: 5px;
+  left: -35px;
+  place-items: center;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
