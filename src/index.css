@@ -53,6 +53,18 @@ body {
   right: 0.3rem;
 }
 
+.faq-pattern {
+  position: relative;
+}
+
+.faq-pattern::after {
+  content: url('/faq-pattern.svg');
+  position: absolute;
+  scale: 60%;
+  top: -1.75rem;
+  left: -5rem;
+}
+
 @media (width >= 48rem /* 768px */) {
   .niche::after {
     scale: 100%;
@@ -94,15 +106,13 @@ body {
     z-index: -50;
   }
 
-  .faq-pattern {
-    position: relative;
-  }
-
   .faq-pattern::after {
     content: url('/faq-pattern.svg');
     position: absolute;
+    scale: 100%;
     top: -1rem;
-    right: 3.75rem;
+    left: 0;
+    right: 1.5rem;
   }
 
 }

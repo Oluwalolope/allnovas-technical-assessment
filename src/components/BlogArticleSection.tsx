@@ -3,11 +3,11 @@ import { BLOGS, type Blog } from "../lib/constants";
 
 const BlogCard = ({ image, slug, title }: Blog) => {
   return (
-    <article className="cursor-pointer transition-all group">
+    <article>
       <img
         src={image}
         alt={title}
-        className="w-full max-w-[395px] h-[275px] rounded-[22px] mb-4 group-hover:opacity-80 group-hover:scale-101 duration-300"
+        className="w-full max-w-[395px] h-[275px] rounded-[22px] mb-4"
         draggable={false}
       />
       <h4 className="text-primary-text text-[20px] font-semibold text-center">

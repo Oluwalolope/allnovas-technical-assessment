@@ -52,8 +52,8 @@ const SearchBar = () => {
         </div>
       </form>
 
-      <div className="flex flex-col gap-2 mt-10 mx-auto">
-        <p className="text-[18px] font-normal text-secondary-text">
+      <div className="flex flex-col md:flex-row gap-2 mt-10 mx-auto">
+        <p className="text-[18px] font-normal text-secondary-text text-center md:text-start whitespace-nowrap">
           Popular search:
         </p>
         <div className="flex flex-row gap-2 items-center flex-wrap">

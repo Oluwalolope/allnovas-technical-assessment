@@ -39,7 +39,7 @@ const HeroSection = () => {
       <div
         className={`
           hidden md:flex
-          absolute top-[55%] left-[8%]
+          absolute top-[55%] left-[4%]
           -translate-y-1/2
           ${left.bg} rounded-xl 
           p-5 pr-6 w-[260px]
@@ -62,7 +62,7 @@ const HeroSection = () => {
       <div
         className={`
           hidden md:flex
-          absolute top-[55%] right-[8%]
+          absolute top-[55%] right-[4%]
           -translate-y-1/2
           ${right.bg} rounded-xl 
           p-5 pl-6 w-[260px]
