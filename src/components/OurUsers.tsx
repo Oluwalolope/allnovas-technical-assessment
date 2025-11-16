@@ -58,7 +58,7 @@ const OurUsers = () => {
               {/* Tooltip */}
               <div
                 className="absolute -top-16 left-1/2 -translate-x-1/2 px-2 py-1 text-xs 
-                bg-[#1d1d1d] text-white rounded opacity-0 group-hover:opacity-100 
+                bg-[#1d1d1d] text-white rounded opacity-0 hidden group-hover:opacity-100 group-hover:block 
                 transition-all duration-200 whitespace-nowrap"
               >
                 <p className="font-medium text-[18px] pb-2">{user.name}</p>
