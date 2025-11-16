@@ -2,9 +2,15 @@ import { useRef, type FormEvent } from "react";
 
 const SearchBar = () => {
   const searchRef = useRef<HTMLInputElement | null>(null);
+
   const handleSearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     const searchQuery = searchRef.current?.value;
+
+    if (searchQuery && searchQuery.trim() === '') {
+      return
+    }
     window.alert(`You searched for: ${searchQuery}`);
   };
 
