@@ -3,7 +3,9 @@ import logo from "../assets/logo.png";
 import { useState } from "react";
 import {
   motion,
-  AnimatePresence
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
 } from "framer-motion";
 
 const NAV_ITEMS = [
@@ -21,8 +23,26 @@ const Header = () => {
     setIsMobileNavOpen((prev) => !prev);
   };
 
+  // Adding the logic to hide the nav when the user is scrolling down and show it when the user is scrolling up
+  const [isUserScrollingDown, setIsUserScrollingDown] =
+    useState<boolean>(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latestY) => {
+    const previousY = scrollY.getPrevious();
+    if (latestY > previousY! && latestY > 250) {
+      setIsUserScrollingDown(true);
+    } else {
+      setIsUserScrollingDown(false);
+    }
+  });
+
   return (
-    <motion.header>
+    <motion.header  variants={{
+                visible: { y: 0 },
+                hidden: { y: '-100%' }
+            }}
+            animate={(!isMobileNavOpen && isUserScrollingDown) ? 'hidden' : 'visible'}
+            transition={{ duration: 0.35, ease: 'easeInOut'}} className="sticky top-0 z-200 bg-white">
       <div className="flex flex-row justify-between items-center w-full max-w-[1512px] mx-auto px-4 md:px-6 pt-10 pb-5 relative">
         <a href="#">
           <img src={logo} alt="Allnovas logo" />
@@ -134,12 +154,17 @@ const Header = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute bg-white w-full min-h-[calc(100dvh-115px)] top-[115px] flex flex-col gap-10 left-0 lg:hidden z-50"
+                className="absolute bg-white w-full min-h-[calc(100dvh-100px)] top-[100px] flex flex-col gap-10 left-0 lg:hidden z-50"
               >
                 <ul className="flex flex-col gap-8 items-center pt-10 ps-4 lg:hidden">
                   {NAV_ITEMS.map((item, index) => (
                     <a key={index} href={item.href}>
-                      <li className="capitalize text-[#0F0F0F] font-semibold" onClick={handleClick}>{item.name}</li>
+                      <li
+                        className="capitalize text-[#0F0F0F] font-semibold"
+                        onClick={handleClick}
+                      >
+                        {item.name}
+                      </li>
                     </a>
                   ))}
                 </ul>

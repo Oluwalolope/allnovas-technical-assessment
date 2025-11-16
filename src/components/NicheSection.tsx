@@ -84,12 +84,12 @@ const NicheSection = () => {
             "
               >
                 {/* Image */}
-                <div className="rounded-t-2xl overflow-hidden aspect-4/3 p-2">
+                <div className="overflow-hidden aspect-4/3 p-2">
                   <img
                     src={niche.image}
                     alt={niche.name}
                     draggable={false}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-fill rounded-t-2xl"
                   />
                 </div>
 

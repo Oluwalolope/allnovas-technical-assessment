@@ -246,7 +246,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-row justify-between items-center py-4 mt-[42px]">
+        <div className="flex flex-col md:flex-row gap-y-2 justify-between items-center py-4 mt-[42px]">
             <SocialMediaIcons />
           <p className="text-secondary-text text-[14px] font-normal">
             &copy;{new Date().getFullYear()} Allnovas. All Rights Reserved.
