@@ -43,7 +43,7 @@ const NicheSection = () => {
           absolute left-0 top-1/2 -translate-y-1/2 z-10 
           bg-white shadow-md rounded-full w-10 h-10 
           flex items-center justify-center 
-          hover:scale-105 transition
+          hover:scale-105 transition cursor-pointer
         "
           >
             ‹
@@ -55,7 +55,7 @@ const NicheSection = () => {
           absolute right-0 top-1/2 -translate-y-1/2 z-10 
           bg-white shadow-md rounded-full w-10 h-10 
           flex items-center justify-center 
-          hover:scale-105 transition
+          hover:scale-105 transition cursor-pointer
         "
           >
             ›
