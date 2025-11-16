@@ -8,7 +8,7 @@ const SearchBar = () => {
 
     const searchQuery = searchRef.current?.value;
 
-    if (searchQuery || searchQuery!.trim() === '') {
+    if (!searchQuery || searchQuery!.trim() === '') {
       return
     }
     window.alert(`You searched for: ${searchQuery}`);
