@@ -29,7 +29,7 @@ const Header = () => {
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (latestY) => {
     const previousY = scrollY.getPrevious();
-    if (latestY > previousY! && latestY > 250) {
+    if (latestY > previousY! && latestY > 100) {
       setIsUserScrollingDown(true);
     } else {
       setIsUserScrollingDown(false);
@@ -63,7 +63,7 @@ const Header = () => {
         <div className="flex flex-row gap-4 items-center">
           <div className="inline-flex items-center gap-x-3">
             <a href="#sign-in" className="hidden md:block">
-              <p className="text-primary-color capitalize font-medium py-[7.5px] px-[21px]">
+              <p className="text-primary-color hover:text-primary-text capitalize font-medium py-[7.5px] px-[21px] transition-all duration-300">
                 sign in
               </p>
             </a>

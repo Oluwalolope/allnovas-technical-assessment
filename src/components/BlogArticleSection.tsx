@@ -3,14 +3,14 @@ import { BLOGS, type Blog } from "../lib/constants";
 
 const BlogCard = ({ image, slug, title }: Blog) => {
   return (
-    <article>
+    <article className="flex flex-col items-center">
       <img
         src={image}
         alt={title}
         className="w-full max-w-[395px] h-[275px] rounded-[22px] mb-4"
         draggable={false}
       />
-      <h4 className="text-primary-text text-[20px] font-semibold text-center">
+      <h4 className="text-primary-text text-[20px] font-semibold text-center max-w-[410px]">
         {title}
       </h4>
 
@@ -66,7 +66,7 @@ const BlogArticleSection = () => {
     },
   };
   return (
-    <section className="mt-[180px] py-16 px-6 md:px-12 overflow-hidden min-h-dvh">
+    <section className="mt-[180px] py-16 px-6 md:px-12 overflow-hidden min-h-dvh grid place-items-center">
       <div className="w-full max-w-[1512px] mx-auto md:mx-0">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
