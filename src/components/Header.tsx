@@ -47,7 +47,8 @@ const Header = () => {
                 sign in
               </p>
             </a>
-            <motion.button
+            <motion.a
+              href="#sign-up"
               onMouseEnter={() => setIsButtonHover(true)}
               onMouseLeave={() => setIsButtonHover(false)}
               className={`bg-primary-color text-white rounded-2xl py-[7.5px] px-[21px] hidden md:inline-flex items-center cursor-pointer box-border ${
@@ -85,7 +86,7 @@ const Header = () => {
                   </motion.svg>
                 )}
               </AnimatePresence>
-            </motion.button>
+            </motion.a>
           </div>
           <div className="flex flex-row gap-4 md:gap-8 items-center lg:hidden">
             <button
@@ -155,8 +156,9 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#sign-up"
-                      className='bg-primary-color text-white rounded-2xl inline-block py-[7.5px] px-[21px] w-full font-medium text-center cursor-pointer box-border md:hidden'
+                    <a
+                      href="#sign-up"
+                      className="bg-primary-color text-white rounded-2xl inline-block py-[7.5px] px-[21px] w-full font-medium text-center cursor-pointer box-border md:hidden"
                     >
                       Join
                     </a>
