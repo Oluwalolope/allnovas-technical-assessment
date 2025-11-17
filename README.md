@@ -38,7 +38,7 @@ This project is a **complete landing page** built as part of the **technical ass
 * **React** (Functional Components & Hooks)
 * **TypeScript**
 * **Tailwind CSS**
-* Optional: Extendable with animation libraries like Framer Motion.
+* **Framer Motion**
 
 ---
 
