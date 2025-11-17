@@ -38,7 +38,7 @@ const HeroSection = () => {
       {/* LEFT ORB */}
       <div
         className={`
-          hidden md:flex
+          hidden lg:flex
           absolute top-[55%] left-[4%]
           -translate-y-1/2
           ${left.bg} rounded-xl 
@@ -61,7 +61,7 @@ const HeroSection = () => {
       {/* RIGHT ORB */}
       <div
         className={`
-          hidden md:flex
+          hidden lg:flex
           absolute top-[55%] right-[4%]
           -translate-y-1/2
           ${right.bg} rounded-xl 

@@ -1,12 +1,8 @@
 import logo from "../assets/logo.png";
 
 import { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import useScrollLock from "../hooks/useScrollLock";
 
 const NAV_ITEMS = [
   { name: "find freelancers", href: "#find-freelancers" },
@@ -23,26 +19,10 @@ const Header = () => {
     setIsMobileNavOpen((prev) => !prev);
   };
 
-  // Adding the logic to hide the nav when the user is scrolling down and show it when the user is scrolling up
-  const [isUserScrollingDown, setIsUserScrollingDown] =
-    useState<boolean>(false);
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latestY) => {
-    const previousY = scrollY.getPrevious();
-    if (latestY > previousY! && latestY > 100) {
-      setIsUserScrollingDown(true);
-    } else {
-      setIsUserScrollingDown(false);
-    }
-  });
+  useScrollLock(isMobileNavOpen);
 
   return (
-    <motion.header  variants={{
-                visible: { y: 0 },
-                hidden: { y: '-100%' }
-            }}
-            animate={(!isMobileNavOpen && isUserScrollingDown) ? 'hidden' : 'visible'}
-            transition={{ duration: 0.35, ease: 'easeInOut'}} className="sticky top-0 z-200 bg-white">
+    <motion.header>
       <div className="flex flex-row justify-between items-center w-full max-w-[1512px] mx-auto px-4 md:px-6 pt-10 pb-5 relative">
         <a href="#">
           <img src={logo} alt="Allnovas logo" />
@@ -70,7 +50,7 @@ const Header = () => {
             <motion.button
               onMouseEnter={() => setIsButtonHover(true)}
               onMouseLeave={() => setIsButtonHover(false)}
-              className={`bg-primary-color text-white rounded-2xl py-[7.5px] px-[21px]  inline-flex items-center cursor-pointer box-border ${
+              className={`bg-primary-color text-white rounded-2xl py-[7.5px] px-[21px] hidden md:inline-flex items-center cursor-pointer box-border ${
                 isButtonHover ? "w-[100px]" : "w-[72px]"
               } transition-[width] duration-300 ease-out`}
               layout
@@ -167,6 +147,20 @@ const Header = () => {
                       </li>
                     </a>
                   ))}
+                  <li>
+                    <a href="#sign-in" className="md:hidden">
+                      <p className="text-primary-color hover:text-primary-text capitalize font-medium py-[7.5px] px-[21px] transition-all duration-300">
+                        sign in
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#sign-up"
+                      className='bg-primary-color text-white rounded-2xl inline-block py-[7.5px] px-[21px] w-full font-medium text-center cursor-pointer box-border md:hidden'
+                    >
+                      Join
+                    </a>
+                  </li>
                 </ul>
               </motion.nav>
             )}
