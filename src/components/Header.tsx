@@ -49,8 +49,8 @@ const Header = () => {
             </a>
             <motion.a
               href="#sign-up"
-              onFocus={() => setIsButtonHover(true)}
-              onBlur={() => setIsButtonHover(false)}
+              onMouseEnter={() => setIsButtonHover(true)}
+              onMouseLeave={() => setIsButtonHover(false)}
               className={`bg-primary-color text-white rounded-2xl py-[7.5px] px-[21px] hidden md:inline-flex items-center cursor-pointer box-border ${
                 isButtonHover ? "w-[100px]" : "w-[72px]"
               } transition-[width] duration-300 ease-out`}
