@@ -34,7 +34,7 @@ const HeroSection = () => {
   const right = rightOrbData[rightIndex];
 
   return (
-    <div className="relative pt-[124px] w-full overflow-visible">
+    <div className="relative pt-[90px] w-full overflow-visible">
       {/* LEFT ORB */}
       <div
         className={`
