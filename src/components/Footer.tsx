@@ -162,7 +162,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="pb-[120px] min-h-dvh">
+    <div className="pb-[120px]">
       <div className="flex flex-col justify-center gap-x-[100px] w-full max-w-[1512px] mx-auto px-4 md:px-6 lg:px-[138px]">
         <div className="flex flex-wrap gap-[60px]">
           <ul className="flex flex-col gap-6">
