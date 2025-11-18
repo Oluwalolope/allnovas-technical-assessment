@@ -4,7 +4,7 @@ import OurUsers from "./OurUsers";
 
 const CommunitySection = () => {
   return (
-    <section className="mt-[180px] py-16 px-6 md:px-12 overflow-hidden min-h-dvh grid place-items-center">
+    <section className="py-[120px] px-6 md:px-12 overflow-hidden min-h-dvh grid place-items-center">
       <div className="w-full max-w-[1512px] mx-auto grid md:grid-cols-2 gap-20 items-center community-background-pattern">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

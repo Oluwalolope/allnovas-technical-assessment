@@ -9,7 +9,7 @@ const Newsletter = () => {
       };
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-center gap-x-[100px] w-full max-w-[1512px] mx-auto px-4 md:px-6 lg:px-[138px] pb-44">
+      <div className="flex flex-col md:flex-row justify-center gap-x-[100px] w-full max-w-[1512px] mx-auto px-4 md:px-6 lg:px-[138px] pb-16 pt-[120px]">
         <div className="mx-auto">
           <h2 className="capitalize pb-3 font-bold font-inter text-[24px] text-primary-text text-center md:text-start">
             Become the smartest person in the room.

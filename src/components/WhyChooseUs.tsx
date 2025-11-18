@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
   return (
-    <section className="mt-[180px] py-16 px-6 md:px-12 overflow-hidden min-h-dvh">
+    <section className="py-[120px] px-6 md:px-12 overflow-hidden">
       <div className="w-full max-w-[1512px] mx-auto grid md:grid-cols-2 gap-20 items-center">
         {/* Background Image */}
         <motion.div

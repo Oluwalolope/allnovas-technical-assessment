@@ -34,15 +34,15 @@ const HeroSection = () => {
   const right = rightOrbData[rightIndex];
 
   return (
-    <div className="relative pt-20 md:pt-[90px] w-full overflow-visible">
+    <div className="relative pt-20 md:pt-[90px] pb-[120px] w-full overflow-visible">
       {/* LEFT ORB */}
       <div
         className={`
           hidden lg:flex
-          absolute top-[55%] left-[4%]
+          absolute top-[25%] left-[4%]
           -translate-y-1/2
-          ${left.bg} rounded-xl 
-          p-5 pr-6 w-[260px]
+          ${left.bg}
+          p-4 w-[260px]
           transition-opacity duration-500
           ${leftVisible ? "opacity-100" : "opacity-0"}
           ${left.rotate}
@@ -62,10 +62,10 @@ const HeroSection = () => {
       <div
         className={`
           hidden lg:flex
-          absolute top-[55%] right-[4%]
+          absolute top-[25%] right-[4%]
           -translate-y-1/2
-          ${right.bg} rounded-xl 
-          p-5 pl-6 w-[260px]
+          ${right.bg} 
+          p-4 w-[260px]
           transition-opacity duration-500
           ${rightVisible ? "opacity-100" : "opacity-0"}
           ${right.rotate}

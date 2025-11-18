@@ -2,7 +2,7 @@ import Accordion from "./faq/Accordion";
 
 const FrequentlyAskedQuestions = () => {
   return (
-    <div className="pt-[124px] min-h-dvh">
+    <div className="py-[120px]">
       <div className="flex flex-col justify-center w-full max-w-[1512px] mx-auto px-4 md:px-6 lg:px-[138px] pb-44">
         <div className="mx-auto">
           <h2 className="capitalize pb-7 font-semibold font-inter text-[30px] lg:text-[36px] max-w-[750px] text-center text-primary-text faq-pattern">

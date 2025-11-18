@@ -257,13 +257,13 @@ export const FREQUENTLY_ASKED_QUESTIONS: faq[] = [
 ]
 
 export const leftOrbData: OrbMessage[] = [
-  { text: "Freelancing transforms passion into profits.", img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300", bg: "bg-[#FFF8E2]/90", rotate: "-rotate-2" },
+  { text: "Freelancing transforms passion into profits.", img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300", bg: "bg-[#FFF8E2]/90", rotate: "-rotate-3" },
   { text: "Your creativity deserves the world.", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300", bg: "bg-[#E8F6FF]/90", rotate: "rotate-1" },
-  { text: "Build, earn, evolve — one step at a time.", img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300", bg: "bg-[#F2E8FF]/90", rotate: "-rotate-1" },
+  { text: "Build, earn, evolve — one step at a time.", img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300", bg: "bg-[#F2E8FF]/90", rotate: "-rotate-2" },
 ];
 
 export const rightOrbData: OrbMessage[] = [
-  { text: "Work, earn and pray. That is my routine.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300", bg: "bg-[#E8FFE8]/90", rotate: "rotate-2" },
+  { text: "Work, earn and pray. That is my routine.", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300", bg: "bg-[#E8FFE8]/90", rotate: "rotate-3" },
   { text: "Freelancing unlocks freedom to grow.", img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=300", bg: "bg-[#FFF0F3]/90", rotate: "-rotate-1" },
-  { text: "Your skills can take you anywhere.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300", bg: "bg-[#E6F1FF]/90", rotate: "rotate-1" },
+  { text: "Your skills can take you anywhere.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300", bg: "bg-[#E6F1FF]/90", rotate: "rotate-2" },
 ];
