@@ -31,7 +31,7 @@ const Header = () => {
         <nav className="hidden lg:block">
           <ul className="flex flex-row justify-between w-full gap-x-10 items-center">
             {NAV_ITEMS.map((item, index) => (
-              <a key={index} href={item.href}>
+              <a key={index} href={item.href} aria-label={`Go to ${item.name} page`}>
                 <li className="capitalize text-[#0F0F0F] hover:text-primary-color transition-all duration-200 font-semibold">
                   {item.name}
                 </li>
@@ -49,8 +49,8 @@ const Header = () => {
             </a>
             <motion.a
               href="#sign-up"
-              onMouseEnter={() => setIsButtonHover(true)}
-              onMouseLeave={() => setIsButtonHover(false)}
+              onFocus={() => setIsButtonHover(true)}
+              onBlur={() => setIsButtonHover(false)}
               className={`bg-primary-color text-white rounded-2xl py-[7.5px] px-[21px] hidden md:inline-flex items-center cursor-pointer box-border ${
                 isButtonHover ? "w-[100px]" : "w-[72px]"
               } transition-[width] duration-300 ease-out`}
@@ -91,6 +91,8 @@ const Header = () => {
           <div className="flex flex-row gap-4 md:gap-8 items-center lg:hidden">
             <button
               type="button"
+              title={isMobileNavOpen? 'Close the mobile navigation' : 'Open the mobile navigation'}
+              aria-label={isMobileNavOpen? 'Close the mobile navigation' : 'Open the mobile navigation'}
               className="p-2 transition-all"
               onClick={handleClick}
             >
@@ -139,7 +141,7 @@ const Header = () => {
               >
                 <ul className="flex flex-col gap-8 items-center pt-10 ps-4 lg:hidden">
                   {NAV_ITEMS.map((item, index) => (
-                    <a key={index} href={item.href}>
+                    <a key={index} href={item.href} aria-label={`Go to ${item.name} page`}>
                       <li
                         className="capitalize text-[#0F0F0F] font-semibold"
                         onClick={handleClick}
@@ -149,7 +151,7 @@ const Header = () => {
                     </a>
                   ))}
                   <li>
-                    <a href="#sign-in" onClick={handleClick} className="md:hidden">
+                    <a href="#sign-in" aria-label='Sign in to your account'  onClick={handleClick} className="md:hidden">
                       <p className="text-primary-color hover:text-primary-text capitalize font-medium py-[7.5px] px-[21px] transition-all duration-300">
                         sign in
                       </p>
@@ -158,6 +160,7 @@ const Header = () => {
                   <li>
                     <a
                       href="#sign-up"
+                      aria-label='Create your account'
                       onClick={handleClick}
                       className="bg-primary-color text-white rounded-2xl inline-block py-[7.5px] px-[21px] w-full font-medium text-center cursor-pointer box-border md:hidden"
                     >
