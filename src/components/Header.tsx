@@ -149,7 +149,7 @@ const Header = () => {
                     </a>
                   ))}
                   <li>
-                    <a href="#sign-in" className="md:hidden">
+                    <a href="#sign-in" onClick={handleClick} className="md:hidden">
                       <p className="text-primary-color hover:text-primary-text capitalize font-medium py-[7.5px] px-[21px] transition-all duration-300">
                         sign in
                       </p>
@@ -158,6 +158,7 @@ const Header = () => {
                   <li>
                     <a
                       href="#sign-up"
+                      onClick={handleClick}
                       className="bg-primary-color text-white rounded-2xl inline-block py-[7.5px] px-[21px] w-full font-medium text-center cursor-pointer box-border md:hidden"
                     >
                       Join
