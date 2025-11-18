@@ -92,7 +92,6 @@ const Header = () => {
             <button
               type="button"
               title={isMobileNavOpen? 'Close the mobile navigation' : 'Open the mobile navigation'}
-              aria-label={isMobileNavOpen? 'Close the mobile navigation' : 'Open the mobile navigation'}
               className="p-2 transition-all"
               onClick={handleClick}
             >

@@ -38,7 +38,7 @@ const SearchBar = () => {
             placeholder="What are you looking for?"
             className="outline-none w-[80%]"
           />
-          <button className="bg-primary-color text-white hover:bg-white hover:text-primary-color size-10 rounded-full inline-grid place-items-center transition-all duration-200 cursor-pointer">
+          <button title="search" className="bg-primary-color text-white hover:bg-white hover:text-primary-color size-10 rounded-full inline-grid place-items-center transition-all duration-200 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
